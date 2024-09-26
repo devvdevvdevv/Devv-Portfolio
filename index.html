@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, intial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Devan's Portfolio</title>
     <link rel="stylesheet" href="style.css">
@@ -263,17 +262,17 @@
             
             <div class="input-box">
                 <div class="input-field field">
-                    <input type="text" placeholder="Name" name="Name" class="item" autocomplete="off" required>
+                    <input type="text" placeholder="Name" name="Name" class="item" autocomplete="off" required inputmode="text">
                     <div class="error-txt">Name can't be blank</div>
                 </div>
                 <div class="input-field field">
-                    <input type="email" placeholder="Email" name="Email" class="item" autocomplete="off" required>
+                    <input type="email" placeholder="Email" name="Email" class="item" autocomplete="off" required inputmode="email">
                 </div>
             </div>
     
             <div class="input-box">
                 <div class="input-field field">
-                    <input type="tel" placeholder="Phone Number" name="Phone #" class="item" autocomplete="off" required>
+                    <input type="tel" placeholder="Phone Number" name="Phone #" class="item" autocomplete="off" required inputmode="tel">
                 </div>
                 <div class="input-field field">
                     <input type="text" placeholder="Subject" name="Subject" class="item" autocomplete="off" required>
@@ -285,10 +284,12 @@
             </div>
             
             <div class="h-captcha" data-captcha="true"></div>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <button type="submit" class="btn">Send Message</button>
             <input type="hidden" name="redirect" value="thanks.html">
         </form>
     </section>
+
 
 
 
