@@ -736,12 +736,9 @@ span{
 }
 .projects-box{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    place-items: center;
-    margin: 5rem 0;
-    gap: 3rem;
-    row-gap: 5rem;
-    flex-basis: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .project-card:nth-child(2){
@@ -850,14 +847,18 @@ span{
 }
 
 
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .contact{
     background-color: var(--bg-color);
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 5rem 10%;
-
+    padding: 3rem 5%;
 }
 .contact h2{
     margin-bottom: 3rem;
@@ -872,9 +873,10 @@ span{
 .contact form{
     width: 600px;
     text-align: center;
-    max-width: 70rem;
+    max-width: 700%;
     margin: 0 auto;
     text-align: center;
+
 }
 
 form .input-box{
@@ -882,6 +884,31 @@ form .input-box{
     justify-content: space-between;
     
     
+    
+}
+
+.input-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-field {
+    flex: 1;
+}
+
+.input-field input,
+.textarea-field textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.textarea-field textarea {
+    height: 150px;
 }
 
 .contact form .input-box {
@@ -1185,60 +1212,73 @@ form button:hover{
     /* Resume Section End */
 }
 
-@media (max-width: 991px) {
-    header, section, .footer {
+
+
+@media (max-width: 768px) {
+    .contact {
         padding: 2rem 3%;
     }
 
-    .contact form {
-        max-width: 90%;
-    }
-
-    .contact form .input-box .input-field {
-        width: 100%;
-        margin: 1rem 0;
-    }
-}
-
-@media (max-width: 895px) {
-    /* Navigation styles... */
-
-    /* Home section styles... */
-
-    /* About section styles... */
-
-    /* Services and Projects sections styles... */
-
-    /* Contact section */
-    .contact {
-        padding: 3rem 5%;
-    }
-
-    .contact form {
-        max-width: 100%;
+    .contact h2.heading {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
     }
 
     .contact form .input-box {
         flex-direction: column;
     }
 
-    .contact form .input-box .input-field {
-        margin: 1rem 0;
+    .input-box .input-field {
+        width: 100%;
+        margin-bottom: 1rem;
     }
 
-    /* Resume section styles... */
+    .field .item {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .contact form .textarea-field textarea {
+        height: 120px;
+    }
+
+    form button {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+    }
 }
 
-@media (max-width: 480px) {
-    /* Other styles... */
-
+@media (max-width: 580px) {
     .contact {
-        padding: 2rem 3%;
+        padding: 1.5rem 2%;
     }
 
-    .contact form .input-box .input-field input,
-    .contact form .textarea-field textarea {
-        font-size: 1.4rem;
-        padding: 1.2rem;
+    .contact form{
+        width: 100%;
+        max-width: 100%;
     }
+
+    .contact h2.heading {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .field .item {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .contact form .textarea-field textarea {
+        height: 100px;
+    }
+
+    .form button {
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
 }
