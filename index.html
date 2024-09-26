@@ -212,23 +212,36 @@
             <h3>Crepuscule</h3>
             
             <p>
-                My "alternative" skateboard and streetwear brand 
+                My "alternative" skateboard and streetwear brand.
             </p>
             <div class="btn">See Project</div>
            </div>
 
-              <div class="project-card hidden">
-            <img src="images/Gopher Watch- SVG (1).svg" alt="">
-            <h3>Gopher Watch</h3>
+              <div class="project-card hidden ">
+                <div class="gww">
+                    <div class="gw">
+                        <img src="images/Gopher Watch- SVG (1).svg" alt="">
+                 
+                    </div>
+                </div>
+            <h3>GoWatch</h3>
             
             <p>
-                My News Blog I founded to document the crime, degeneracy, and deterioration at the University, and it's adjacent areas
+                My News Blog I founded to document the crime, degeneracy, and deterioration at the University, 
+                and it's adjacent areas.
             </p>
             <div class="btn">See Project</div>
            </div>
 
            <div class="project-card hidden">
-            <img src="images/devvsphotodumps.svg" alt="">
+                <div class="dpdsvg">
+                    <div class="dpd">
+                        <img src="images/devvsphotodumps.svg" alt="">
+                 
+                    </div>
+                </div>
+                   
+            
             <h3>Devvs Photo Dump</h3>
             
             
@@ -243,85 +256,38 @@
         </div>
     </section>
     <section class="contact" id="Contact">
-        <h2 class="heading hidden">Contact <span>Me</span></h2>
-
-
+        <h2 class="heading">Contact <span>Me</span></h2>
+    
         <form action="https://api.web3forms.com/submit" method="POST">
-
             <input type="hidden" name="access_key" value="c58af28d-4a41-436a-a49b-77a99b88010b">
+            
             <div class="input-box">
                 <div class="input-field field">
-                    <input 
-                        type="text"
-                        placeholder="Name"
-                        name="Name"
-                        cols="30"
-                        rows="10"
-                        
-                        class="item"
-                        autocomplete="off"
-                        required
-                        >
+                    <input type="text" placeholder="Name" name="Name" class="item" autocomplete="off" required>
                     <div class="error-txt">Name can't be blank</div>
                 </div>
                 <div class="input-field field">
-
-                    <input 
-                        type="email"
-                        placeholder="Email"
-                        name="Email"
-                        cols="30"
-                        rows="10"
-                       
-                        class="item"
-                        autocomplete="off"
-                        required
-                        >
-                    
+                    <input type="email" placeholder="Email" name="Email" class="item" autocomplete="off" required>
                 </div>
             </div>
-
+    
             <div class="input-box">
                 <div class="input-field field">
-                    <input type="number"
-                        placeholder="Phone Number"
-                        name="Phone #"
-                        cols="30"
-                        rows="10"
-                        
-                        class="item"
-                        autocomplete="off"
-                        required
-                        >
-                    
+                    <input type="tel" placeholder="Phone Number" name="Phone #" class="item" autocomplete="off" required>
                 </div>
                 <div class="input-field field">
-                    <input type="text"
-                        placeholder="Subject"
-                        name="Subject"
-                        cols="30"
-                        rows="10"
-                        
-                        class="item"
-                        autocomplete="off"
-                        required
-                        >
-                    
+                    <input type="text" placeholder="Subject" name="Subject" class="item" autocomplete="off" required>
                 </div>
             </div>
-
-         
-          <div class="textarea-field field">
-            <textarea name="Message" id="" cols="30"
-            rows="10" placeholder="Your Message" class="item" autocomplete="off" required></textarea>
-          </div>
-          
-          
-          <div class="h-captcha" id="captcha" data-captcha="true"></div>
-            <button onclick="submit">Send Message</button>
-          <input type="hidden" name="redirect" value="https://DevanLee.me/Thanks.html" >
+    
+            <div class="textarea-field field">
+                <textarea name="Message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off" required></textarea>
+            </div>
+            
+            <div class="h-captcha" data-captcha="true"></div>
+            <button type="submit" class="btn">Send Message</button>
+            <input type="hidden" name="redirect" value="thanks.html">
         </form>
-        
     </section>
 
 
