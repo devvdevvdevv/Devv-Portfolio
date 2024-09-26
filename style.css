@@ -36,7 +36,16 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
+
+header, section, .footer {
+    padding: 2rem 5%;
+}
+
+
+/*new code starts here */
 
 .header{
     position: fixed;
@@ -590,7 +599,7 @@ span{
     
 }
 .card{
-    height: 350px;
+    height: 390px;
     width: 370px;
     background-color: var(--second-bg-color);
     padding: 3% 8%;
@@ -605,6 +614,7 @@ span{
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin:auto;
     
 }
 
@@ -765,6 +775,8 @@ span{
     transition: 0.4s ease;
 }
 
+
+
 .project-card:hover{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color);
@@ -773,6 +785,8 @@ span{
 }
 
 .project-card img{
+    position: fixed;
+    top: 100px;
     max-width: 18vw;
     object-fit: cover;
     border-radius: 2rem;
@@ -787,6 +801,54 @@ span{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.project-card h3{
+    align-items: center;
+    padding-top: 15px;
+}
+
+.project-card p{
+
+    align-items: center;
+}
+
+.dpdsvg{
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: -5px; /* Reduced margin to bring text closer */
+}
+
+.dpd img{
+    width: 100%;
+    height: auto;
+    display: block; /* Removes any potential inline spacing */
+    position: absolute; /* Changed to absolute positioning */
+    width: 100%;
+    max-width: 1900px;
+    left: -5%; /* Use left instead of margin-left for absolute positioning */
+    top: 10%; /* Use top instead of margin-top for absolute positioning */
+    
+}
+
+.gww{
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 0;
+    margin-top: 5;
+}
+
+.gw img{
+    width: 100%;
+    height: 100px;
+    display: block; /* Removes any potential inline spacing */
+    position: absolute; /* Changed to absolute positioning */
+    width: 100%;
+    max-width: 1900px;
+    left: 0%; /* Use left instead of margin-left for absolute positioning */
+    top: 10%; /* Use top instead of margin-top for absolute positioning */
+    margin-top: 25px ;
+
+}
+
 
 .contact{
     background-color: var(--bg-color);
@@ -794,7 +856,7 @@ span{
     justify-content: center;
     min-height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
+    padding: 5rem 10%;
 
 }
 .contact h2{
@@ -802,8 +864,16 @@ span{
     color: var(--text-color);
 }
 
+.contact h2.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 .contact form{
     width: 600px;
+    text-align: center;
+    max-width: 70rem;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -811,6 +881,36 @@ form .input-box{
     display: flex;
     justify-content: space-between;
     
+    
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field,
+.contact form .textarea-field {
+    position: relative;
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
 }
 
 .input-box .input-field{
@@ -875,6 +975,10 @@ form button{
 form button:hover{
     transform: scale(1.05);
     box-shadow: 0 0 50px var(--main-color)    
+}
+
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
 }
 
 
@@ -1079,4 +1183,62 @@ form button:hover{
 
 
     /* Resume Section End */
+}
+
+@media (max-width: 991px) {
+    header, section, .footer {
+        padding: 2rem 3%;
+    }
+
+    .contact form {
+        max-width: 90%;
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 895px) {
+    /* Navigation styles... */
+
+    /* Home section styles... */
+
+    /* About section styles... */
+
+    /* Services and Projects sections styles... */
+
+    /* Contact section */
+    .contact {
+        padding: 3rem 5%;
+    }
+
+    .contact form {
+        max-width: 100%;
+    }
+
+    .contact form .input-box {
+        flex-direction: column;
+    }
+
+    .contact form .input-box .input-field {
+        margin: 1rem 0;
+    }
+
+    /* Resume section styles... */
+}
+
+@media (max-width: 480px) {
+    /* Other styles... */
+
+    .contact {
+        padding: 2rem 3%;
+    }
+
+    .contact form .input-box .input-field input,
+    .contact form .textarea-field textarea {
+        font-size: 1.4rem;
+        padding: 1.2rem;
+    }
 }
